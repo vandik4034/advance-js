@@ -10,7 +10,6 @@ async function getMovies() {
                 { id: 3, title: 'Inception' }
             ]);
 
-
         }, 2000)
     })
 }
@@ -35,7 +34,7 @@ async function processPayment(amount) {
 
         setTimeout(() => {
 
-            resolve(`Payment of $${amount} proccessed successfullt`)
+            resolve(`Payment of $${amount} proccessed successfully`)
         }, 2500)
 
     })
@@ -87,7 +86,9 @@ async function movieBookingSystem() {
         console.log(ticketSendingResult);
 
         console.log('Movie booking completed successfully!');
+
     } catch (error) {
+
         console.error('Error during movie booking:', error);
     }
 

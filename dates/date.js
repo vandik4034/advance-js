@@ -1,28 +1,84 @@
-// Function to set an alarm with a sound
+
 function setAlarmWithSound(hours, minutes, seconds) {
+
     let currentTime = new Date();
+
     let alarmTime = new Date();
+
     alarmTime.setHours(hours);
     alarmTime.setMinutes(minutes);
     alarmTime.setSeconds(seconds);
-    alarmTime.setMilliseconds(0);  // Set milliseconds to 0
+    alarmTime.setMilliseconds(0);
 
     let timeDifference = alarmTime - currentTime;
 
     if (timeDifference < 0) {
-        timeDifference += 24 * 60 * 60 * 1000; // Add 24 hours in milliseconds
+        timeDifference += 24 * 60 * 60 * 1000; 
     }
 
     console.log(`Alarm set for ${alarmTime.toLocaleTimeString()}`);
 
-    // Set the timeout to trigger the alarm
+    
     setTimeout(function() {
-        // Create an audio element to play a sound
-        let alarmSound = new Audio('https://www.soundjay.com/button/beep-07.wav');  // You can use any sound URL
-        alarmSound.play(); // Play the sound when the alarm goes off
+        
+        let alarmSound = new Audio('file:///C:/Users/Admin/Downloads/mixkit-street-public-alarm-997.wav');  
+        alarmSound.play(); 
         alert("ALARM! Time's up!");
     }, timeDifference);
 }
 
-// Set an alarm for 12:30 PM
-setAlarmWithSound(15, 14, 0);
+
+setAlarmWithSound(15, 29, 0);
+
+
+// more example 
+
+
+let eventdate = new Date(2025, 6, 15);
+
+let currentdate = new Date();
+
+
+let timediff = eventdate - currentdate;
+
+let dayevent = Math.floor(timediff / (1000 * 3600 *24));
+
+console.log (`there are ${dayevent} days until left the event`)
+
+
+// more example 
+
+
+let date = new Date(2023, 2, 12) 
+
+let daysofWeek = ["Sunday", "Monday", "Tuseday", "Wendsday", "Thursday", "Friday", "Saturaday"]
+
+let dayofWeek = date.getDay();
+
+console.log(`The specific date ${date.toDateString()} is a ${daysofWeek[dayofWeek]}.`);
+
+
+// more example
+
+
+let currentDate = new Date()
+
+console.log(currentDate)
+
+let someDate = new Date(2025, 2, 6) 
+
+let today = new Date();
+
+
+if (someDate < today) {
+
+    console.log("the date is past")
+
+} else if (someDate > today) {
+
+    console.log("the date is Future") 
+
+} else {
+
+    console.log("date is today")
+}

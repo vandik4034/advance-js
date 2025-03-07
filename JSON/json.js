@@ -43,11 +43,12 @@ console.log("Data saved in Local Storage:", localStorage.getItem("userPreference
 
 
 
-// example 1
+// example 100
 
-let cartItems = [
+ let cartItems = [
 
     { productId: 101, productName: "Laptop", quantity: 1, price: 1200 },
+    
   { productId: 102, productName: "Phone", quantity: 2, price: 800 },
 ]
 

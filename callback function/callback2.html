@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback 1</title>
+</head>
+<body>
+
+    <button id="myBtn">Click me</button>
+
+
+    <script>
+
+        function handleEvent(Callback) {
+
+            let button = document.getElementById('myBtn') 
+
+            button.addEventListener('click', Callback);
+
+        }
+
+        function showMessage() {
+        
+            alert("button is clicked sucessfully")
+        }
+
+        handleEvent(showMessage);
+
+    </script>
+    
+</body>
+</html>

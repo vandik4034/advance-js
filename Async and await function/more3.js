@@ -5,6 +5,7 @@ async function processPayment(cartAmount) {
             resolve(`Payment of $${cartAmount} processed`);
         }, 2000);
     });
+
 }
 
 //  Shipping Address Process
